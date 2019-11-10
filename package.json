@@ -1,13 +1,14 @@
 {
   "name": "@fdstack/vue-feather-icon",
   "repository": "https://github.com/fdstack/vue-feather-icon.git",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:demo": "vue-cli-service build",
-    "build:lib": "rollup -c && cp src/lib/index.d.ts dist/lib/index.d.ts",
-    "build:lib-watch": "cp src/lib/index.d.ts dist/lib/index.d.ts && rollup -c --watch",
-    "publish": "",
+    "lib:build": "rollup -c && cp src/lib/index.d.ts dist/lib/index.d.ts",
+    "lib:watch": "cp src/lib/index.d.ts dist/lib/index.d.ts && rollup -c --watch",
+    "lib:version": "cd dist/lib && npm version",
+    "lib:publish": "cd dist/lib && npm publish --access public",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

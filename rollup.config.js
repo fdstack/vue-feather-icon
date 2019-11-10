@@ -10,6 +10,7 @@ import generatePackageJson from 'rollup-plugin-generate-package-json'
 import svgo from 'rollup-plugin-svgo'
 
 const outDir = 'dist/lib/';
+const pkg = require('./package.json');
 
 const basePlugins = [
   replace({ 'process.env.NODE_ENV': '"production"' }),
@@ -57,16 +58,16 @@ export default [
         ]
       }),
       generatePackageJson({
-        main: './library.js',
-        module: './library.esm.js',
         baseContents: {
-          "name": "@fdstack/vue-feather-icon",
-          "version": "0.1.0",
-          "repository": "https://github.com/fdstack/vue-feather-icon.git",
-          "peerDependencies": {
-            "vue": "^2.6.10",
-            "vue-class-component": "^7.0.2",
-            "vue-property-decorator": "^8.3.0"
+          'name': pkg.name,
+          'version': pkg.version,
+          'repository': pkg.repository,
+          'main': './library.js',
+          'module': './library.esm.js',
+          'peerDependencies': {
+            'vue': '^2.6.10',
+            'vue-class-component': '^7.0.2',
+            'vue-property-decorator': '^8.3.0'
           },
         }
       }),
