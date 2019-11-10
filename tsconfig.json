@@ -11,13 +11,16 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "jest"
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "src/demo/*"
+      ],
+      "vue-feather-icon": [
+        "dist/lib"
       ]
     },
     "lib": [
@@ -27,13 +30,6 @@
       "scripthost"
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
   "exclude": [
     "node_modules"
   ]
