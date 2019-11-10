@@ -10,6 +10,7 @@ import generatePackageJson from 'rollup-plugin-generate-package-json'
 import svgo from 'rollup-plugin-svgo'
 
 const outDir = 'dist/lib/';
+const outName = 'vue-feather-icon';
 const pkg = require('./package.json');
 
 const basePlugins = [
@@ -39,13 +40,13 @@ export default [
     output: [
       {
         format: 'esm',
-        file: `${outDir}library.esm.js`,
+        file: `${outDir}${outName}.esm.js`,
         exports: 'named',
         name: 'VueFeatherIcon',
       },
       {
         format: 'cjs',
-        file: `${outDir}library.js`,
+        file: `${outDir}${outName}.cjs.js`,
         exports: 'named',
         name: 'VueFeatherIcon',
       },
@@ -62,13 +63,14 @@ export default [
           'name': pkg.name,
           'version': pkg.version,
           'repository': pkg.repository,
-          'main': './library.js',
-          'module': './library.esm.js',
+          'main': `./${outName}.cjs.js`,
+          'module': `./${outName}.esm.js`,
           'peerDependencies': {
             'vue': '^2.6.10',
             'vue-class-component': '^7.0.2',
             'vue-property-decorator': '^8.3.0'
           },
+          'dependencies': {}
         }
       }),
     ]
@@ -80,7 +82,7 @@ export default [
     ],
     output: {
       format: 'iife',
-      file: `${outDir}library.browser.js`,
+      file: `${outDir}${outName}.js`,
       exports: 'named',
       name: 'VueFeatherIcon',
       globals: {

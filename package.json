@@ -7,7 +7,6 @@
     "build:demo": "vue-cli-service build",
     "lib:build": "rollup -c && cp src/lib/index.d.ts dist/lib/index.d.ts",
     "lib:watch": "cp src/lib/index.d.ts dist/lib/index.d.ts && rollup -c --watch",
-    "lib:version": "cd dist/lib && npm version",
     "lib:publish": "cd dist/lib && npm publish --access public",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
