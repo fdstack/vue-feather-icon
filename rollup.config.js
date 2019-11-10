@@ -66,11 +66,8 @@ export default [
           'main': `./${outName}.cjs.js`,
           'module': `./${outName}.esm.js`,
           'peerDependencies': {
-            'vue': '^2.6.10',
-            'vue-class-component': '^7.0.2',
-            'vue-property-decorator': '^8.3.0'
-          },
-          'dependencies': {}
+            'vue': '^2.6.10'
+          }
         }
       }),
     ]
