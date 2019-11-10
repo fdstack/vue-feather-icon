@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:demo": "vue-cli-service build",
-    "lib:build": "rollup -c && cp src/lib/index.d.ts dist/lib/index.d.ts",
+    "lib:build": "rollup -c && cp src/lib/index.d.ts dist/lib/index.d.ts && cp README.md dsit/lib/README.md",
     "lib:watch": "cp src/lib/index.d.ts dist/lib/index.d.ts && rollup -c --watch",
     "lib:publish": "cd dist/lib && npm publish --access public",
     "test:unit": "vue-cli-service test:unit",
