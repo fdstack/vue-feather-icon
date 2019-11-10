@@ -20,7 +20,7 @@
         "src/demo/*"
       ],
       "vue-feather-icon": [
-        "dist/lib"
+        "dist/lib/index"
       ]
     },
     "lib": [
