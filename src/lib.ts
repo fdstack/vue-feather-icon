@@ -30,4 +30,4 @@ if (GlobalVue) {
 }
 
 export default plugin;
-export * from './lib';
+export * from './lib/index';
