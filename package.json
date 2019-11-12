@@ -1,7 +1,7 @@
 {
   "name": "@fdstack/vue-feather-icon",
   "repository": "https://github.com/fdstack/vue-feather-icon.git",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
