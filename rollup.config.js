@@ -1,7 +1,8 @@
 import { terser } from 'rollup-plugin-terser';
 import vue from 'rollup-plugin-vue';
 import typescript from 'rollup-plugin-typescript';
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from 'rollup-plugin-commonjs';
+import copy from 'rollup-plugin-copy';
 import alias from '@rollup/plugin-alias';
 import buble from '@rollup/plugin-buble';
 import replace from '@rollup/plugin-replace';
@@ -69,6 +70,13 @@ export default [
             'vue': '^2.6.10'
           }
         }
+      }),
+      copy({
+        targets: [
+          { src: 'src/lib/index.d.ts', dest: 'dist/lib/index.d.ts' },
+          { src: 'README.md', dest: 'dist/lib/README.md' },
+          { src: 'LICENSE', dest: 'dist/lib/LICENSE' },
+        ]
       }),
     ]
   },
