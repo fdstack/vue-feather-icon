@@ -73,9 +73,7 @@ export default [
       }),
       copy({
         targets: [
-          { src: 'src/lib/index.d.ts', dest: 'dist/lib/index.d.ts' },
-          { src: 'README.md', dest: 'dist/lib/README.md' },
-          { src: 'LICENSE', dest: 'dist/lib/LICENSE' },
+          { src: [ 'src/lib/index.d.ts', 'README.md', 'LICENSE' ], dest: 'dist/lib' },
         ]
       }),
     ]
