@@ -64,6 +64,7 @@ export default [
           'name': pkg.name,
           'version': pkg.version,
           'repository': pkg.repository,
+          "license": "MIT",
           'main': `./${outName}.cjs.js`,
           'module': `./${outName}.esm.js`,
           'peerDependencies': {
